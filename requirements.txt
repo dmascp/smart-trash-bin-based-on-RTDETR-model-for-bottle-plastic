@@ -1,0 +1,19 @@
+# ==========================================
+# Dependencies for Smart Trash Bin RT-DETR
+# ==========================================
+
+# Core Deep Learning & Computer Vision
+ultralytics>=8.3.0
+openvino>=2024.0.0
+opencv-python>=4.8.0
+
+# Embedded & Serial Hardware Communication
+pyserial>=3.5
+
+# Desktop GUI & Image Handling
+pillow>=10.0.0
+
+# Data Analysis & Metrics Visualization (for training & evaluation)
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0

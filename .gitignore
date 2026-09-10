@@ -1,0 +1,68 @@
+# ==========================================
+# Python Byte-compiled & Runtime Cache
+# ==========================================
+__pycache__/
+*.py[cod]
+*.class
+*.so
+
+# ==========================================
+# C / C++ & Arduino Build Artifacts
+# ==========================================
+*.hex
+*.elf
+*.bin.gz
+
+# ==========================================
+# Virtual Environments
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+conda-env/
+
+# ==========================================
+# IDE & Operating System Specific
+# ==========================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Heavy Model Weights (Host via External Releases)
+# ==========================================
+*.pt
+*.pth
+*.onnx
+*.engine
+*.bin
+best.pt
+best_openvino_model/
+weights/best.pt
+weights/best_openvino_model/
+!weights/metadata.yaml
+
+# ==========================================
+# Datasets & Compressed Archives
+# ==========================================
+dataset/
+datasets/
+data/
+*.zip
+*.tar.gz
+*.rar
+
+# ==========================================
+# Academic Drafts & Private Documents
+# ==========================================
+*.docx
+*.pdf
+*.pptx
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
