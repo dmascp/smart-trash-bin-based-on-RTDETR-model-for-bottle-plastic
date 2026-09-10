@@ -1,0 +1,1 @@
+# smart-trash-bin-based-on-RTDETR-model-for-bottle-plastic
