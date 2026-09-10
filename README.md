@@ -107,6 +107,10 @@ ESP32 Microcontroller
 ## 📊 Dataset & Model Configuration
 
 * **Dataset Identifier:** `SampahPlastik-2` (Roboflow `data.yaml`)
+* **Dataset Sources:**
+  * **Roboflow Project:** [SampahPlastik on Roboflow Universe](https://universe.roboflow.com/channy/sampahplastik-qipw1)
+  * **Dataset Archive & Storage:** [Google Drive Shared Folder](https://drive.google.com/drive/folders/13PXKEgIr3O0g9s6dhWu9olDuxcSmuCL_?usp=sharing) (`SampahPlastik-2-20260910T102751Z-1-001.zip`)
+* **Dataset Description:** The dataset was custom-annotated by the project owner and exported from Roboflow in a YOLO-compatible object detection format for RT-DETR training.
 * **Classes (2 Classes):**
   * `0: Botol Plastik` (Target plastic bottles)
   * `1: Random` (Foreign objects / non-bottle waste / background items)
@@ -230,10 +234,29 @@ requirements.txt
 ## 📦 Model Weights
 
 Due to Git file size limitations, large model binary files are excluded from version control:
-* PyTorch training weights (`best.pt`, ~66.2 MB)
-* OpenVINO binary weights (`best_openvino_model/best.bin`, ~127.9 MB)
+* **PyTorch Checkpoint (`best.pt`, ~66.2 MB):** Full PyTorch training checkpoint generated at the end of the 50-epoch training run.
+* **OpenVINO Deployment Model (`best_openvino_model/`, ~128 MB):** Optimized OpenVINO Intermediate Representation (IR) folder containing `best.xml`, `best.bin`, and `metadata.yaml` for high-speed edge inference on host CPUs / iGPUs.
 
-Refer to [`weights/README.md`](weights/README.md) for instructions on where to obtain model weights and how to place them into the workspace. The model configuration file [`weights/metadata.yaml`](weights/metadata.yaml) is tracked directly in the repository to define input resolution and class label mappings.
+The model configuration file [`weights/metadata.yaml`](weights/metadata.yaml) is tracked directly in the repository to define input resolution and class label mappings.
+
+### Obtaining Model Weights
+Pre-trained model artifacts are available on the project's [Google Drive Shared Folder](https://drive.google.com/drive/folders/13PXKEgIr3O0g9s6dhWu9olDuxcSmuCL_?usp=sharing).
+
+> [!IMPORTANT]
+> **Model Placement Requirement:**
+> The main desktop application ([`src/Uji_TerakhirBuzzer.py`](src/Uji_TerakhirBuzzer.py)) and headless script ([`src/uji_integrasi_igpu.py`](src/uji_integrasi_igpu.py)) load the OpenVINO model using relative path `RTDETR('best_openvino_model')`.
+> Therefore, the extracted `best_openvino_model/` directory must be placed directly in the **project root directory** (current working directory), not inside a subdirectory:
+> ```text
+> smart-trash-bin-based-on-RTDETR-model-for-bottle-plastic/
+> ├── best_openvino_model/
+> │   ├── best.xml
+> │   ├── best.bin
+> │   └── metadata.yaml
+> ├── src/
+> │   └── Uji_TerakhirBuzzer.py
+> └── ...
+> ```
+> For camera diagnostic testing with [`src/uji_kamera.py`](src/uji_kamera.py), `best.pt` must also be placed directly in the project root.
 
 ---
 
@@ -255,7 +278,8 @@ pip install -r requirements.txt
 ```
 
 ### 2. Prepare Model Weights
-Ensure model weights (`best.pt` or the extracted `best_openvino_model/` directory) are placed in the project root or inside `weights/` as documented in [`weights/README.md`](weights/README.md).
+1. Download `best_openvino_model/` and/or `best.pt` from the [Google Drive Shared Folder](https://drive.google.com/drive/folders/13PXKEgIr3O0g9s6dhWu9olDuxcSmuCL_?usp=sharing).
+2. Place the extracted `best_openvino_model/` directory directly in the **project root directory** where the Python scripts are executed. Refer to [`weights/README.md`](weights/README.md) for further details.
 
 ### 3. Flash ESP32 Firmware
 1. Connect the ESP32 board to your computer via USB.
