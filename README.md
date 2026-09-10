@@ -109,7 +109,7 @@ ESP32 Microcontroller
 * **Dataset Identifier:** `SampahPlastik-2` (Roboflow `data.yaml`)
 * **Dataset Sources:**
   * **Roboflow Project:** [SampahPlastik on Roboflow Universe](https://universe.roboflow.com/channy/sampahplastik-qipw1)
-  * **Dataset Archive & Storage:** [Google Drive Shared Folder](https://drive.google.com/drive/folders/13PXKEgIr3O0g9s6dhWu9olDuxcSmuCL_?usp=sharing) (`SampahPlastik-2-20260910T102751Z-1-001.zip`)
+  * **Dataset Archive & Storage:** [Google Drive Shared Folder](https://drive.google.com/drive/folders/1b3EH4Z80s2mea7TAfDXYPhcHtDoVOGov?usp=sharing) (`SampahPlastik-2-20260910T102751Z-1-001.zip`)
 * **Dataset Description:** The dataset was custom-annotated by the project owner and exported from Roboflow in a YOLO-compatible object detection format for RT-DETR training.
 * **Classes (2 Classes):**
   * `0: Botol Plastik` (Target plastic bottles)
@@ -240,7 +240,7 @@ Due to Git file size limitations, large model binary files are excluded from ver
 The model configuration file [`weights/metadata.yaml`](weights/metadata.yaml) is tracked directly in the repository to define input resolution and class label mappings.
 
 ### Obtaining Model Weights
-Pre-trained model artifacts are available on the project's [Google Drive Shared Folder](https://drive.google.com/drive/folders/13PXKEgIr3O0g9s6dhWu9olDuxcSmuCL_?usp=sharing).
+Pre-trained model artifacts are available on the project's [Google Drive Shared Folder](https://drive.google.com/drive/folders/1b3EH4Z80s2mea7TAfDXYPhcHtDoVOGov?usp=sharing).
 
 > [!IMPORTANT]
 > **Model Placement Requirement:**
@@ -278,7 +278,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Prepare Model Weights
-1. Download `best_openvino_model/` and/or `best.pt` from the [Google Drive Shared Folder](https://drive.google.com/drive/folders/13PXKEgIr3O0g9s6dhWu9olDuxcSmuCL_?usp=sharing).
+1. Download `best_openvino_model/` and/or `best.pt` from the [Google Drive Shared Folder](https://drive.google.com/drive/folders/1b3EH4Z80s2mea7TAfDXYPhcHtDoVOGov?usp=sharing).
 2. Place the extracted `best_openvino_model/` directory directly in the **project root directory** where the Python scripts are executed. Refer to [`weights/README.md`](weights/README.md) for further details.
 
 ### 3. Flash ESP32 Firmware

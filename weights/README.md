@@ -24,7 +24,7 @@ best.pt                           # Bobot model RT-DETR PyTorch (~66.2 MB)
 ## Cara Memperoleh Bobot Model
 
 File bobot model pre-trained dan arsip dataset tersedia melalui folder Google Drive resmi proyek:
-🔗 **[Google Drive Model & Dataset Storage](https://drive.google.com/drive/folders/13PXKEgIr3O0g9s6dhWu9olDuxcSmuCL_?usp=sharing)**
+🔗 **[Google Drive Model & Dataset Storage](https://drive.google.com/drive/folders/1b3EH4Z80s2mea7TAfDXYPhcHtDoVOGov?usp=sharing)**
 
 File yang tersedia di cloud storage:
 * `best_openvino_model/` (folder berisi `best.xml`, `best.bin`, dan `metadata.yaml`)
