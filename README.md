@@ -301,6 +301,6 @@ This project represents an integrated research implementation combining deep lea
 
 * **Author:** Demas Chandra Permana
 * **Program:** Pendidikan Teknik Otomasi Industri dan Robotika (PTOIR)
-* **Faculty:** Fakultas Pendidikan Teknologi dan Kejuruan (FPTK)
+* **Faculty:** Fakultas Pendidikan Teknologi dan Industri (FPTI)
 * **Institution:** Universitas Pendidikan Indonesia (UPI), Bandung, Indonesia
 * **Advisor:** Dr. Erik Haritman, S.Pd., M.T.
